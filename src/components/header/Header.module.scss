@@ -1,3 +1,33 @@
-.header  {
+.header {
     display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+.logo {
+    flex: auto;
+    text-align: left;
+}
+.navLink {
+    margin-right: 40px;
+    color: #000;
+    font-family: Circe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.button {
+    display: block;
+    padding: 14px 20px;
+    color: #000;
+    font-family: Circe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 14px;
+    background: #fff;
+    border: none;
+    outline: none;
 }
