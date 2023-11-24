@@ -1,21 +1,21 @@
-import './App.scss';
+import styles from './App.module.scss';
 import Header from './components/header/Header';
 
 function App() {
   return (
-    <div className="app">
-      <div className='firstScreen'>
-        <div className='container'>
+    <div className={styles.app}>
+      <div className={styles.firstScreen}>
+        <div className={styles.container}>
           <Header />
-          <h1 className='title'>участвуй
+          <h1 className={styles.title}>участвуй
             в акции и
             выигрывай призы!</h1>
-            <button className='button'>участвовать</button>
+            <button className={styles.button}>участвовать</button>
         </div>
       </div>
-      <div className='secondScreen'>
-        <div className='container'>
-          <h2 className='secondTitle'>Выигрывай призы</h2>
+      <div className={styles.secondScreen}>
+        <div className={styles.container}>
+          <h2 className={styles.secondTitle}>Выигрывай призы</h2>
         </div>
       </div>
     </div>
