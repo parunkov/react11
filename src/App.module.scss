@@ -9,7 +9,16 @@ html {
   height: 100vh;
   background: #b1c728;
 }
+.firstScreenContainer {
+  position: relative;
+  max-width: 116rem;
+  margin: 0 auto;
+  height: 100%;
+}
 .title {
+  width: 45.2rem;
+  margin: 0 auto;
+  margin-bottom: 2.7rem;
   color: #fff;
   text-align: center;
   font-family: Circe;
@@ -18,8 +27,20 @@ html {
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  white-space: pre-wrap;
 }
-.container {
-  max-width: 116rem;
-  margin: 0 auto;
+.button {
+  padding: 3rem 4rem;
+  color: #fff;
+  font-family: Circe;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: uppercase;
+  border-radius: 1.4rem;
+  background: #3c4497;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

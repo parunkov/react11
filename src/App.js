@@ -5,11 +5,9 @@ function App() {
   return (
     <div className={styles.app}>
       <div className={styles.firstScreen}>
-        <div className={styles.container}>
+        <div className={styles.firstScreenContainer}>
           <Header />
-          <h1 className={styles.title}>участвуй
-            в акции и
-            выигрывай призы!</h1>
+          <h1 className={styles.title} dangerouslySetInnerHTML={{__html: 'участвуй<br>в акции и выигрывай призы!'}} />
             <button className={styles.button}>участвовать</button>
         </div>
       </div>
