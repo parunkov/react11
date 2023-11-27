@@ -19,7 +19,7 @@ function Header() {
                 </svg>
             </div>
             <nav className={styles.headerNav}>
-                {navData.map((item) => <a href={item.link} className={styles.navLink}>{item.text}</a>)}
+                {navData.map((item) => <a href={item.link} className={styles.navLink} key={item.text}>{item.text}</a>)}
             </nav>
             <button className={styles.button}>Личный кабинет</button>
         </div>

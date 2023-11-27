@@ -1,32 +1,35 @@
 .header {
     display: flex;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 3rem;
 }
 .logo {
     flex: auto;
     text-align: left;
+    svg {
+    width: 13.7rem;
+    }
 }
 .navLink {
-    margin-right: 40px;
+    margin-right: 4rem;
     color: #000;
     font-family: Circe;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 2.4rem;
     text-transform: uppercase;
     text-decoration: none;
 }
 .button {
     display: block;
-    padding: 14px 20px;
+    padding: 1.4rem 2rem;
     color: #000;
     font-family: Circe;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 2rem;
     text-transform: uppercase;
-    border-radius: 14px;
+    border-radius: 1.4rem;
     background: #fff;
     border: none;
     outline: none;
