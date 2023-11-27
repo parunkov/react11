@@ -8,6 +8,7 @@ html {
   width: 100%;
   height: 100vh;
   background: #b1c728;
+  overflow: hidden;
 }
 .firstScreenContainer {
   position: relative;
@@ -16,6 +17,7 @@ html {
   height: 100%;
 }
 .title {
+  position: relative;
   width: 45.2rem;
   margin: 0 auto;
   margin-bottom: 2.7rem;
@@ -28,8 +30,10 @@ html {
   line-height: 100%;
   text-transform: uppercase;
   white-space: pre-wrap;
+  z-index: 2;
 }
 .button {
+  position: relative;
   padding: 3rem 4rem;
   color: #fff;
   font-family: Circe;
@@ -43,4 +47,13 @@ html {
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 2;
+}
+.bottleWrapper {
+  position: absolute;
+  bottom: -0.5rem;
+  left: -13.8rem;
+}
+.bottle {
+  width: 74.3rem;
 }

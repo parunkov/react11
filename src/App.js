@@ -6,6 +6,9 @@ function App() {
     <div className={styles.app}>
       <div className={styles.firstScreen}>
         <div className={styles.firstScreenContainer}>
+          <div className={styles.bottleWrapper}>
+            <img src={require('./assets/bottle.png')} alt="Напиток" className={styles.bottle} />
+          </div>
           <Header />
           <h1 className={styles.title} dangerouslySetInnerHTML={{__html: 'участвуй<br>в акции и выигрывай призы!'}} />
             <button className={styles.button}>участвовать</button>
