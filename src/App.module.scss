@@ -30,7 +30,7 @@ html {
   line-height: 100%;
   text-transform: uppercase;
   white-space: pre-wrap;
-  z-index: 2;
+  z-index: 10;
 }
 .button {
   position: relative;
@@ -47,7 +47,7 @@ html {
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
 }
 .bottleWrapper {
   position: absolute;
@@ -56,4 +56,72 @@ html {
 }
 .bottle {
   width: 74.3rem;
+}
+.prizeWrapper {
+  position: absolute;
+  right: -3.4rem;
+  top: 32.4rem;
+}
+.prize {
+  width: 46.5rem;
+}
+.leafWrapper {
+  position: absolute;
+  top: 9.7rem;
+  right: -12.4rem;
+}
+.leaf {
+  width: 14.8rem;
+}
+.card {
+  position: absolute;
+  top: 15.2rem;
+  right: 2.8rem;
+  width: 28.6rem;
+  height: 17rem;
+  padding: 1rem 1rem;
+  padding-top: 6.1rem;
+  background: #ffd907;
+  border-radius: 2rem;
+  transform: rotate(-11.302deg);
+}
+.cardImageWrapper {
+  position: absolute;
+  left: 2.2rem;
+  top: 1.5rem;
+}
+.cardImage {
+  transform: rotate(11.302deg);
+}
+.cardWifiWrapper {
+  position: absolute;
+  right: 1.5rem;
+  top: 2rem;
+  transform: rotate(11.302deg);
+}
+.cardButton {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  margin-left: 4.7rem;
+  color: #000;
+  text-align: center;
+  font-family: Circe;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: uppercase;
+  border-radius: 9rem;
+  background: #fff;
+}
+.cardSumm {
+  color: #000;
+  text-align: center;
+  font-family: Circe;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+  letter-spacing: -0.3rem;
+  text-transform: uppercase;
 }

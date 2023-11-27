@@ -1,8 +1,10 @@
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     padding-top: 3rem;
     margin-bottom: 5.1rem;
+    z-index: 10;
 }
 .logo {
     flex: auto;
