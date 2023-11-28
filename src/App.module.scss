@@ -81,9 +81,17 @@ body {
   position: absolute;
   bottom: -0.9em;
   left: -13.8em;
+  @media (max-width: 768px) {
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .bottle {
   width: 74.3em;
+  @media (max-width: 768px) {
+    width: 24em;
+  }
 }
 .prizeWrapper {
   position: absolute;
