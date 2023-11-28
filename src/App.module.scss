@@ -25,6 +25,7 @@ body {
     padding: 0 1em;
   }
   @media (max-width: 768px) {
+    min-height: 34em;
     padding-left: 1.8em;
     padding-right: 2.2em;
   }
@@ -76,17 +77,34 @@ body {
   position: absolute;
   right: -3.4em;
   top: 32.4em;
+  @media (max-width: 768px) {
+    top: 7.8em;
+    right: 64%;
+    transform: translateX(50%);
+  }
 }
 .prize {
   width: 46.5em;
+  @media (max-width: 768px) {
+    width: 24em;
+  }
 }
 .leafWrapper {
   position: absolute;
   top: 9.7em;
   right: -12.4em;
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 6.2em;
+    right: 91%;
+    transform: translateX(50%);
+  }
 }
 .leaf {
   width: 14.8em;
+  @media (max-width: 768px) {
+    width: 7.6em;
+  }
 }
 .card {
   position: absolute;
@@ -99,23 +117,45 @@ body {
   background: #ffd907;
   border-radius: 2em;
   transform: rotate(-11.302deg);
+  @media (max-width: 768px) {
+    top: 12.8em;
+    right: 0.8em;
+    width: 16.1em;
+    height: 9.56em;
+    padding-top: 3.4rem;
+    border-radius: 1.2em;
+  }
 }
 .cardImageWrapper {
   position: absolute;
   left: 2.2em;
   top: 1.5em;
+  @media (max-width: 768px) {
+    left: 1.4em;
+    top: 0.8em;
+  }
 }
 .cardImage {
   transform: rotate(11.302deg);
   width: 5.4em;
+  @media (max-width: 768px) {
+    width: 3em;
+  }
 }
 .cardWifiWrapper {
   position: absolute;
   right: 1.5em;
   top: 2em;
   transform: rotate(11.302deg);
+  @media (max-width: 768px) {
+    right: 0.8em;
+    top: 0.3em;
+  }
   svg {
     width: 3.1em;
+    @media (max-width: 768px) {
+      width: 1.7em;
+    }
   }
 }
 .cardButton {
@@ -130,6 +170,12 @@ body {
   text-transform: uppercase;
   border-radius: 9rem;
   background: #fff;
+  @media (max-width: 768px) {
+    padding: 0.4em 0.5em;
+    margin-left: 2.8rem;
+    font-size: 0.95rem;
+    line-height: 0.8rem;
+  }
 }
 .cardSumm {
   color: #000;
@@ -139,6 +185,10 @@ body {
   line-height: 120%;
   letter-spacing: -0.3rem;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 3.4rem;
+    letter-spacing: -0.2rem;
+  }
 }
 .secondScreen {
   padding-top: 5.7em;

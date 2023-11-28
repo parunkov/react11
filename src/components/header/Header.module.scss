@@ -43,6 +43,8 @@
 }
 .mobileHeader {
     display: none;
+    position: relative;
+    z-index: 10;
     @media (max-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -58,4 +60,5 @@
 }
 .burger {
     padding-top: 0.4em;
+    cursor: pointer;
 }
