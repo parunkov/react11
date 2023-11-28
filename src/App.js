@@ -38,6 +38,9 @@ function App() {
       <div className={styles.secondScreen}>
         <div className={styles.container}>
           <div className={styles.spiralWrapper} dangerouslySetInnerHTML={{ __html: spiral }} />
+          <div className={styles.lemonWrapper}>
+            <img src={require('./assets/lemon.png')} alt="Лимон" className={styles.lemon} />
+          </div>
           <h2 className={styles.secondTitle}>Выигрывай призы</h2>
           <h4 className={styles.guaranteeTitle}>Гарантированный приз</h4>
           <div className={styles.guarantee}>
