@@ -3,13 +3,14 @@ html {
   @media (max-width: 1120px) {
     font-size: 0.89292vw;
   }
+  @media (max-width: 768px) {
+    font-size: 62.5%;
+  }
 }
 body {
   color: #000;
   font-family: Circe;
-  // font-size: 2.4rem;
   font-weight: 400;
-  // line-height: 3.2rem;
 }
 .app {
   text-align: center;
@@ -22,6 +23,10 @@ body {
   overflow: hidden;
   @media (max-width: 1180px) {
     padding: 0 1em;
+  }
+  @media (max-width: 768px) {
+    padding-left: 1.8em;
+    padding-right: 2.2em;
   }
 }
 .firstScreenContainer {
@@ -140,6 +145,10 @@ body {
   overflow: hidden;
   @media (max-width: 1180px) {
     padding: 0 1em;
+  }
+  @media (max-width: 768px) {
+    padding-left: 1.8em;
+    padding-right: 2.2em;
   }
 }
 .container {
