@@ -9,6 +9,7 @@ function App() {
     {image: './assets/alisa.png', text: 'Колонка'},
     {image: './assets/wach.png', text: 'Смарт часы'}
   ];
+  const titleHtml = window.innerWidth > 768 ?'участвуй<br>в акции и выигрывай призы!' : 'участвуй в акции и выигрывай призы!';
 
   return (
     <div className={styles.app}>
@@ -24,7 +25,7 @@ function App() {
             <img src={require('./assets/leaf.png')} alt="Призы" className={styles.leaf} />
           </div>
           <Header />
-          <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: 'участвуй<br>в акции и выигрывай призы!' }} />
+          <h1 className={styles.title} dangerouslySetInnerHTML={{ __html:  titleHtml}} />
           <button className={styles.button}>участвовать</button>
           <div className={styles.card}>
             <div className={styles.cardImageWrapper}>
