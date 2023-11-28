@@ -28,6 +28,7 @@ body {
     min-height: 34em;
     padding-left: 1.8em;
     padding-right: 2.2em;
+    margin-bottom: 2.7em;
   }
 }
 .firstScreenContainer {
@@ -230,6 +231,9 @@ body {
   position: absolute;
   left: -4.5em;
   top: -1.1em;
+  @media (max-width: 768px) {
+    display: none;
+  }
   svg {
     width: 14.9em;
   }
@@ -238,6 +242,9 @@ body {
   position: absolute;
   right: -30em;
   top: 42em;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .lemon {
   height: 27.9em;
@@ -250,6 +257,11 @@ body {
   font-weight: 700;
   line-height: 6rem;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+  }
 }
 h4 {
   margin: 0;
@@ -258,14 +270,25 @@ h4 {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 3.2rem;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
 }
 .guaranteeTitle {
   margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 }
 .guarantee {
   margin-bottom: 4em;
   border-radius: 3.6em;
   background: #f6f6f6;
+  @media (max-width: 768px) {
+    border-radius: 2.2em;
+    margin-bottom: 1.9em;
+  }
 }
 .guaranteeContainer {
   display: inline-flex;
@@ -273,9 +296,22 @@ h4 {
   margin: 0 auto;
   padding-top: 4.2em;
   padding-bottom: 4em;
+  @media (max-width: 768px) {
+    padding-top: 3.2rem;
+    padding-bottom: 3rem;
+  }
 }
 .quaranteeImageWrapper {
   margin-right: 13.4em;
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 2.4em;
+  }
+  img {
+    @media (max-width: 768px) {
+      width: 11.7em;
+    }
+  }
 }
 .guaranteeText {
   width: 38.9rem;
@@ -284,6 +320,13 @@ h4 {
   text-align: left;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  @media (max-width: 768px) {
+    width: 17.6rem;
+    padding-right: 2.1rem;
+    margin-top: 0;
+    font-size: 1.6rem;
+    line-height: 120%;
+  }
 }
 .prizesTitle {
   margin-bottom: 13.4rem;
