@@ -1,5 +1,6 @@
 import styles from './App.module.scss';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import { wifi, spiral } from './assets/svg';
 
 function App() {
@@ -60,6 +61,8 @@ function App() {
               <div className={styles.prizesText}>{item.text}</div>
             </div>)}
           </div>
+          <button className={styles.buttonSmall}>Загрузить чек</button>
+          <Footer />
         </div>
       </div>
     </div>

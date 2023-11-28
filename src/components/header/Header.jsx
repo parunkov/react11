@@ -1,12 +1,7 @@
 import styles from './Header.module.scss';
+import { navData } from '../../data/navData';
 
 function Header() {
-    const navData = [
-        {text: 'главная', link: '#'},
-        {text: 'призы', link: '#'},
-        {text: 'как участвовать', link: '#'},
-        {text: 'вопросы и ответы', link: '#'},
-    ]
     return (
         <div className={styles.header}>
             <div className={styles.logo}>

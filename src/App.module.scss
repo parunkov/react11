@@ -126,6 +126,7 @@ body {
 }
 .secondScreen {
   padding-top: 5.7rem;
+  overflow-x: hidden;
 }
 .container {
   position: relative;
@@ -192,10 +193,11 @@ h4 {
 .prizesContainer {
   display: flex;
   gap: 4rem;
+  margin-bottom: 4rem;
 }
 .prizesItem {
   flex: 0 0 calc((100% - 8rem) / 3);
-  border-radius: 36px;
+  border-radius: 3.6rem;
   background: #ffd907;
 }
 .prizesImage {
@@ -205,4 +207,19 @@ h4 {
 .prizesText {
   margin-top: 3rem;
   margin-bottom: 4.7rem;
+}
+.buttonSmall {
+  width: 36rem;
+  padding: 2rem 3.6rem;
+  margin-bottom: 7.9rem;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: uppercase;
+  border-radius: 1.4rem;
+  background: #3c4497;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
