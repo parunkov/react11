@@ -58,7 +58,9 @@ function App() {
           <h4 className={styles.prizesTitle}>Ежемесячный приз</h4>
           <div className={styles.prizesContainer}>
             {pizes.map((item) =><div className={styles.prizesItem} key={item.text}>
-              <img src={require(`${item.image}`)} alt={item.text} className={styles.prizesImage} />
+              <div className={styles.prizesImageWrapper}>
+                <img src={require(`${item.image}`)} alt={item.text} className={styles.prizesImage} />
+              </div>
               <div className={styles.prizesText}>{item.text}</div>
             </div>)}
           </div>

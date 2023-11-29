@@ -330,26 +330,56 @@ h4 {
 }
 .prizesTitle {
   margin-bottom: 13.4rem;
+  @media (max-width: 768px) {
+    margin-bottom: 3.8rem;
+  }
 }
 .prizesContainer {
   display: flex;
   gap: 4em;
   margin-bottom: 4em;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3.5em;
+  }
 }
 .prizesItem {
   flex: 0 0 calc((100% - 8em) / 3);
   border-radius: 3.6em;
   background: #ffd907;
+  @media (max-width: 768px) {
+    display: flex;
+    border-radius: 2em;
+  }
+}
+.prizesImageWrapper {
+  @media (max-width: 768px) {
+    margin-left: 1.7rem;
+    flex: auto;
+    text-align: center;
+  }
 }
 .prizesImage {
   height: 28.3em;
   margin-top: -10em;
+  @media (max-width: 768px) {
+    height: 12.7em;
+    margin-top: -3em;
+  }
 }
 .prizesText {
   margin-top: 3.5rem;
   margin-bottom: 4.7rem;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  @media (max-width: 768px) {
+    flex: 0 0 20rem;
+    padding-left: 2.5rem;
+    margin-top: 4.5rem;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
 }
 .buttonSmall {
   width: 36rem;
