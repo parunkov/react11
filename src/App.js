@@ -38,6 +38,7 @@ function App() {
         </div>
       </div>
       <div className={styles.secondScreen}>
+        <a name="second"></a>
         <div className={styles.container}>
           <div className={styles.spiralWrapper} dangerouslySetInnerHTML={{ __html: spiral }} />
           <div className={styles.lemonWrapper}>

@@ -20,7 +20,7 @@ function Header() {
                 <div className={styles.burger} dangerouslySetInnerHTML={{ __html: burger }} onClick={() => setNavOpened(true)} />
                 <nav className={isNavOpened ? styles.mobileHeaderNav : styles.closedHeaderNav}>
                     <div className={styles.navContainer}>
-                        {navData.map((item) => <a href={item.link} className={styles.navLink} key={item.text}>{item.text}</a>)}
+                        {navData.map((item) => <a href={item.link} className={styles.navLink} key={item.text} onClick={() => setNavOpened(false)}>{item.text}</a>)}
                         <button className={styles.button}>Личный кабинет</button>
                     </div>
                     <div className={styles.closeButton} dangerouslySetInnerHTML={{ __html: cross }} onClick={() => setNavOpened(false)} />
