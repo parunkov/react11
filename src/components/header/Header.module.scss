@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 3rem;
     margin-bottom: 5.1rem;
-    z-index: 10;
+    z-index: 11;
     @media (max-width: 768px) {
         display: none;
     }
@@ -16,6 +16,30 @@
         width: 13.7rem;
     }
 }
+.headerNav,
+.closedHeaderNav,
+.mobileHeaderNav {
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background: #fff;
+        z-index: 11;
+        overflow-y: auto;
+    }
+}
+.closedHeaderNav {
+    display: none;
+}
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 30.9rem;
+    height: auto;
+    padding: 7rem 2rem;
+}
 .navLink {
     margin-right: 4rem;
     color: #000;
@@ -25,6 +49,13 @@
     line-height: 2.4rem;
     text-transform: uppercase;
     text-decoration: none;
+    @media (max-width: 768px) {
+        position: relative;
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        z-index: 15;
+    }
 }
 .button {
     display: block;
@@ -40,11 +71,21 @@
     border: none;
     outline: none;
     cursor: pointer;
+    @media (max-width: 768px) {
+        position: relative;
+        width: 100%;
+        padding: 1.6rem 4rem;
+        border-radius: 1.4rem;
+        letter-spacing: 0.1rem;
+        color: #fff;
+        background: #3c4497;
+        z-index: 15;
+    }
 }
 .mobileHeader {
     display: none;
     position: relative;
-    z-index: 10;
+    z-index: 11;
     @media (max-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -61,4 +102,22 @@
 .burger {
     padding-top: 0.4em;
     cursor: pointer;
+}
+.closeButton {
+    position: absolute;
+    top: 2rem;
+    right: 1.9rem;
+    z-index: 16;
+    svg {
+        width: 2.3rem;
+    }
+}
+.palmWrapper {
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0;
+    z-index: 13;
+}
+.palm {
+    width: 12.6rem;
 }

@@ -30,4 +30,11 @@ const burger = `
 </svg>
 `;
 
-export { wifi, spiral, logo, burger };
+const cross = `
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+  <path d="M2 22L21.3333 2" stroke="black" stroke-width="3"/>
+  <path d="M21.334 22L2.00065 2" stroke="black" stroke-width="3"/>
+</svg>
+`;
+
+export { wifi, spiral, logo, burger, cross };
