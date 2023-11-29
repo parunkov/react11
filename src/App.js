@@ -64,7 +64,7 @@ function App() {
               <div className={styles.prizesText}>{item.text}</div>
             </div>)}
           </div>
-          <button className={styles.buttonSmall}>Загрузить чек</button>
+          <button className={styles.buttonSmall}>{window.innerWidth > 768 ? 'Загрузить чек' : 'участвовать'}</button>
           <Footer />
         </div>
       </div>
