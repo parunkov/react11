@@ -32,6 +32,14 @@
 .inputGroup {
     margin-bottom: 14px;
 }
+.hasError {
+    .input {
+        border: 2px solid #ff191f; 
+    }
+    .errorMessage {
+        display: block;
+    }
+}
 .inputLabel {
     display: block;
     margin-bottom: 10px;

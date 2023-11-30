@@ -20,17 +20,17 @@ function Popin() {
             <div className={styles.popin}>
                 <div className={styles.popinTitle}>регистрация</div>
                 <form className={styles.form} id="form">
-                    <div className={cn(styles.inputGroup, isNameValid ? '' : 'hasError')}>
+                    <div className={cn(styles.inputGroup, isNameValid ? '' : styles.hasError)}>
                         <label htmlFor="name" className={styles.inputLabel}>ФИО</label>
                         <input type="text" name="name" id="name" className={styles.input} required />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
-                    <div className={cn(styles.inputGroup, isLoginValid ? '' : 'hasError')}>
+                    <div className={cn(styles.inputGroup, isLoginValid ? '' : styles.hasError)}>
                         <label htmlFor="login" className={styles.inputLabel}>E-mail</label>
                         <input type="text" name="login" id="login" className={styles.input} required />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
-                    <div className={cn(styles.inputGroup, isPhoneValid ? '' : 'hasError')}>
+                    <div className={cn(styles.inputGroup, isPhoneValid ? '' : styles.hasError)}>
                         <label htmlFor="phone" className={styles.inputLabel}>Телефон</label>
                         <input type="text" name="phone" id="phone" className={styles.input} required />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
