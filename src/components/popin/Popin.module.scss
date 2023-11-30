@@ -16,6 +16,10 @@
     transform: translate(-50%, -50%);
     border-radius: 3.6em;
     background: #ffd907;
+    @media (min-width: 769px), (max-height: 718px) {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
 }
 .popinTitle {
     margin-bottom: 2rem;
@@ -55,5 +59,71 @@
     color: #ff191f;
     font-size: 1.4rem;
     font-weight: 700;
-    line-height: 2rem; 
+    line-height: 2rem;
+}
+.checkboxGroup {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+.checkbox + label {
+    display: block;
+    position: relative;
+    padding-left: 3.4rem;
+    padding-right: 4rem;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 120%;
+    cursor: pointer;
+}
+.checkbox + label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.8rem;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.checkbox:checked + label::before {
+    border-color: #3c4497;
+    background-color: #3c4497;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.button {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+    border-radius: 14px;
+    background: #3c4497;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popinText {
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 2rem;
 }

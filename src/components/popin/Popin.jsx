@@ -23,13 +23,9 @@ function Popin() {
                     </div>
                     <div className={styles.checkboxGroup}>
                         <input type="checkbox" name="rules1" id="rules1" className={styles.checkbox} />
-                        <label htmlFor="rules1" className={styles.checkboxLabel}>Я согласен с <a href="/">правилами акции</a>, <a href="/">
-                            пользовательским
-                                соглашением
-                        </a>
-                            и с <a href="/">положением о конфиденциальности</a></label>
+                        <label htmlFor="rules1" className={styles.checkboxLabel}>Я согласен с <a href="/">правилами акции</a>, <a href="/">пользовательским&nbsp;соглашением</a> и&nbsp;с&nbsp;<a href="/">положением о конфиденциальности</a></label>
                     </div>
-                    <button type="submit">Зарегистрироваться</button>
+                    <button type="submit" className={styles.button}>Зарегистрироваться</button>
                 </form>
                 <div className={styles.popinText}>Есть аккаунт? <a href="/">Авторизуйся</a></div>
             </div>
