@@ -1,7 +1,9 @@
 import styles from './App.module.scss';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Popin from './components/popin/Popin';
 import { wifi, spiral } from './assets/svg';
+import { useState } from 'react';
 
 function App() {
   const pizes = [
@@ -9,6 +11,9 @@ function App() {
     {image: './assets/alisa.png', text: 'Колонка'},
     {image: './assets/wach.png', text: 'Смарт часы'}
   ];
+
+  const [isPopinOpened, setPopinOpened] = useState(true);
+
   const titleHtml = window.innerWidth > 768 ?'участвуй<br>в акции и выигрывай призы!' : 'участвуй в акции и выигрывай призы!';
 
   return (
@@ -69,6 +74,7 @@ function App() {
           <Footer />
         </div>
       </div>
+      {isPopinOpened ? <Popin /> : ''}
     </div>
   );
 }
