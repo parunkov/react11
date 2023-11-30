@@ -37,4 +37,11 @@ const cross = `
 </svg>
 `;
 
-export { wifi, spiral, logo, burger, cross };
+const popinCross = `
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+  <path d="M2 22L21.3333 2" stroke="black" stroke-width="4" />
+  <path d="M21.334 22L2.00065 2" stroke="black" stroke-width="4" />
+</svg>
+`;
+
+export { wifi, spiral, logo, burger, cross, popinCross };
