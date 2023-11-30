@@ -7,12 +7,26 @@ function Popin() {
     const [isNameValid, setNameValid] = useState(true);
     const [isLoginValid, setLoginValid] = useState(true);
     const [isPhoneValid, setPhoneValid] = useState(true);
+    const [nameValue, setNameValue] = useState('');
+
+    const checkName = (nameInputValue) => {
+        if (nameInputValue && nameInputValue.match(/^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\s[А-ЯЁ][а-яё]*\s[А-ЯЁ][а-яё]*$/)) {
+            setNameValid(true);
+        } else {
+            setNameValid(false);
+        }
+    };
+
+    const onNameChange = (event) => {
+        setNameValue(event.target.value);
+        checkName(event.target.value);
+    }
 
     const onButtonClick = () => {
         const nameInputValue = document.querySelector('#form #name')?.value;
         const loginInputValue = document.querySelector('#form #login')?.value;
         const phoneInputValue = document.querySelector('#form #phone')?.value;
-
+        checkName(nameInputValue);
     };
 
     return (
@@ -22,12 +36,21 @@ function Popin() {
                 <form className={styles.form} id="form">
                     <div className={cn(styles.inputGroup, isNameValid ? '' : styles.hasError)}>
                         <label htmlFor="name" className={styles.inputLabel}>ФИО</label>
-                        <input type="text" name="name" id="name" className={styles.input} required />
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            className={styles.input}
+                            value={nameValue}
+                            onChange={onNameChange}
+                            required
+                        />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
                     <div className={cn(styles.inputGroup, isLoginValid ? '' : styles.hasError)}>
                         <label htmlFor="login" className={styles.inputLabel}>E-mail</label>
-                        <input type="text" name="login" id="login" className={styles.input} required />
+                        <input
+                            type="text" name="login" id="login" className={styles.input} required />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
                     <div className={cn(styles.inputGroup, isPhoneValid ? '' : styles.hasError)}>
