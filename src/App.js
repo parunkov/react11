@@ -12,7 +12,7 @@ function App() {
     {image: './assets/wach.png', text: 'Смарт часы'}
   ];
 
-  const [isPopinOpened, setPopinOpened] = useState(true);
+  const [isPopinOpened, setPopinOpened] = useState(false);
 
   const titleHtml = window.innerWidth > 768 ?'участвуй<br>в акции и выигрывай призы!' : 'участвуй в акции и выигрывай призы!';
 
@@ -29,7 +29,7 @@ function App() {
           <div className={styles.leafWrapper}>
             <img src={require('./assets/leaf.png')} alt="Призы" className={styles.leaf} />
           </div>
-          <Header />
+          <Header callback={() => setPopinOpened(true)} />
           <h1 className={styles.title} dangerouslySetInnerHTML={{ __html:  titleHtml}} />
           <button className={styles.button}>участвовать</button>
           <div className={styles.card}>
