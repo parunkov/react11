@@ -66,7 +66,6 @@ function Popin({ popinCallback }) {
     };
 
     const onOverlayClick = (event) => {
-        console.log(event.target);
         if (event.target.closest('#popin')) return;
         popinCallback();
     }

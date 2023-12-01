@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 function Header({ callback }) {
     const [isNavOpened, setNavOpened] = useState(false);
-    console.log(callback);
 
     return (
         <>
