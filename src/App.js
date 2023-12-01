@@ -31,7 +31,7 @@ function App() {
           </div>
           <Header callback={() => setPopinOpened(true)} />
           <h1 className={styles.title} dangerouslySetInnerHTML={{ __html:  titleHtml}} />
-          <button className={styles.button}>участвовать</button>
+          <button className={styles.button} onClick={() => setPopinOpened(true)}>участвовать</button>
           <div className={styles.card}>
             <div className={styles.cardImageWrapper}>
               <img src={require('./assets/card2.png')} alt="Чип" className={styles.cardImage} />
@@ -70,11 +70,11 @@ function App() {
               <div className={styles.prizesText}>{item.text}</div>
             </div>)}
           </div>
-          <button className={styles.buttonSmall}>{window.innerWidth > 768 ? 'Загрузить чек' : 'участвовать'}</button>
+          <button className={styles.buttonSmall} onClick={() => setPopinOpened(true)}>{window.innerWidth > 768 ? 'Загрузить чек' : 'участвовать'}</button>
           <Footer />
         </div>
       </div>
-      {isPopinOpened ? <Popin /> : ''}
+      {isPopinOpened ? <Popin popinCallback={() => setPopinOpened(false)} /> : ''}
     </div>
   );
 }

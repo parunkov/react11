@@ -3,7 +3,7 @@ import { popinCross, registerImage } from '../../assets/svg';
 import { useState } from 'react';
 import cn from 'classnames';
 
-function Popin() {
+function Popin({ popinCallback }) {
     const [isButtonPressed, setButtonPressed] = useState(false);
     const [isNameValid, setNameValid] = useState(true);
     const [isLoginValid, setLoginValid] = useState(true);
@@ -65,8 +65,14 @@ function Popin() {
         }
     };
 
+    const onOverlayClick = (event) => {
+        console.log(event.target);
+        if (event.target.closest('#popin')) return;
+        popinCallback();
+    }
+
     return (
-        <div className={styles.overlay}>
+        <div className={styles.overlay} onClick={onOverlayClick}>
             <div className={styles.popin} id="popin">
                 {isRegistred
                     ? <div className={styles.registerImage} dangerouslySetInnerHTML={{ __html: registerImage }} /> : ''}
@@ -139,11 +145,11 @@ function Popin() {
                 {isRegistred
                     ? <>
                         <div className={styles.registerText}>{`Добро пожаловать, ${nameValue}!`}</div>
-                        <button type="button" className={styles.button}>Закрыть окно</button>
+                        <button type="button" className={styles.button} onClick={popinCallback}>Закрыть окно</button>
                     </>
                     : <div className={styles.popinText}>Есть аккаунт? <a href="/">Авторизуйся</a></div>
                 }
-                <div className={styles.popinCloseButton} dangerouslySetInnerHTML={{ __html: popinCross }} />
+                <div className={styles.popinCloseButton} dangerouslySetInnerHTML={{ __html: popinCross }} onClick={popinCallback} />
             </div>
         </div>
     );
