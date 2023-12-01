@@ -9,8 +9,11 @@ function Popin() {
     const [isLoginValid, setLoginValid] = useState(true);
     const [isPhoneValid, setPhoneValid] = useState(true);
     const [nameValue, setNameValue] = useState('');
+    const [loginValue, setLoginValue] = useState('');
+    const [phoneValue, setPhoneeValue] = useState('');
 
     const nameRegExp = /^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\s[А-ЯЁ][а-яё]*\s[А-ЯЁ][а-яё]*$/;
+    const loginRegExp = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
     const checkInput = (value, regExp, callback) => {
         if (value && value.match(regExp)) {
@@ -25,6 +28,7 @@ function Popin() {
         const loginInputValue = document.querySelector('#form #login')?.value;
         const phoneInputValue = document.querySelector('#form #phone')?.value;
         checkInput(nameInputValue, nameRegExp, setNameValid);
+        checkInput(loginInputValue, loginRegExp, setLoginValid);
         setButtonPressed(true);
     };
 
@@ -45,8 +49,7 @@ function Popin() {
                                 setNameValue(event.target.value);
                                 if (!isButtonPressed) return;
                                 checkInput(event.target.value, nameRegExp, setNameValid);
-                            }
-                        }
+                            }}
                             required
                         />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
@@ -54,12 +57,30 @@ function Popin() {
                     <div className={cn(styles.inputGroup, isLoginValid ? '' : styles.hasError)}>
                         <label htmlFor="login" className={styles.inputLabel}>E-mail</label>
                         <input
-                            type="text" name="login" id="login" className={styles.input} required />
+                            type="text"
+                            name="login"
+                            id="login"
+                            className={styles.input}
+                            value={loginValue}
+                            onChange={(event) => {
+                                console.log(event.target.value);
+                                setLoginValue(event.target.value);
+                                if (!isButtonPressed) return;
+                                checkInput(event.target.value, loginRegExp, setLoginValid);
+                            }}
+                            required
+                        />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
                     <div className={cn(styles.inputGroup, isPhoneValid ? '' : styles.hasError)}>
                         <label htmlFor="phone" className={styles.inputLabel}>Телефон</label>
-                        <input type="text" name="phone" id="phone" className={styles.input} required />
+                        <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            className={styles.input}
+                            required
+                        />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
                     </div>
                     <div className={styles.checkboxGroup}>
