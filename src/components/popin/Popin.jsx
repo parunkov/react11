@@ -4,29 +4,28 @@ import { useState } from 'react';
 import cn from 'classnames';
 
 function Popin() {
+    const [isButtonPressed, setButtonPressed] = useState(false);
     const [isNameValid, setNameValid] = useState(true);
     const [isLoginValid, setLoginValid] = useState(true);
     const [isPhoneValid, setPhoneValid] = useState(true);
     const [nameValue, setNameValue] = useState('');
 
-    const checkName = (nameInputValue) => {
-        if (nameInputValue && nameInputValue.match(/^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\s[А-ЯЁ][а-яё]*\s[А-ЯЁ][а-яё]*$/)) {
-            setNameValid(true);
-        } else {
-            setNameValid(false);
-        }
-    };
+    const nameRegExp = /^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\s[А-ЯЁ][а-яё]*\s[А-ЯЁ][а-яё]*$/;
 
-    const onNameChange = (event) => {
-        setNameValue(event.target.value);
-        checkName(event.target.value);
+    const checkInput = (value, regExp, callback) => {
+        if (value && value.match(regExp)) {
+            callback(true);
+        } else {
+            callback(false);
+        }
     }
 
     const onButtonClick = () => {
         const nameInputValue = document.querySelector('#form #name')?.value;
         const loginInputValue = document.querySelector('#form #login')?.value;
         const phoneInputValue = document.querySelector('#form #phone')?.value;
-        checkName(nameInputValue);
+        checkInput(nameInputValue, nameRegExp, setNameValid);
+        setButtonPressed(true);
     };
 
     return (
@@ -42,7 +41,12 @@ function Popin() {
                             id="name"
                             className={styles.input}
                             value={nameValue}
-                            onChange={onNameChange}
+                            onChange={(event) => {
+                                setNameValue(event.target.value);
+                                if (!isButtonPressed) return;
+                                checkInput(event.target.value, nameRegExp, setNameValid);
+                            }
+                        }
                             required
                         />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
