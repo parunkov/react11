@@ -36,7 +36,6 @@ function Popin({ popinCallback }) {
         setButtonPressed(true);
         if (isNameValid && isLoginValid && isPhoneValid && consentChecked) {
             const requestBody = `login=${loginValue}&name=${nameValue}&phone=${phoneValue}&rules1=true`;
-            console.log("🚀 ~ file: Popin.jsx:40 ~ onButtonClick ~ requestBody:", requestBody)
 
             fetch("https://promo-test.emlsdr.ru/backend/api/registerByEmail", {
                 "headers": {
@@ -125,7 +124,6 @@ function Popin({ popinCallback }) {
                                 className={styles.input}
                                 value={phoneValue}
                                 onChange={(event) => {
-                                    console.log(event.target.value);
                                     setPhoneeValue(event.target.value);
                                     if (!isButtonPressed) return;
                                     checkInput(event.target.value, phoneRegExp, setPhoneValid);
