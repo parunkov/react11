@@ -14,6 +14,7 @@ function Popin() {
 
     const nameRegExp = /^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\s[А-ЯЁ][а-яё]*\s[А-ЯЁ][а-яё]*$/;
     const loginRegExp = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const phoneRegExp = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
 
     const checkInput = (value, regExp, callback) => {
         if (value && value.match(regExp)) {
@@ -29,6 +30,7 @@ function Popin() {
         const phoneInputValue = document.querySelector('#form #phone')?.value;
         checkInput(nameInputValue, nameRegExp, setNameValid);
         checkInput(loginInputValue, loginRegExp, setLoginValid);
+        checkInput(phoneInputValue, phoneRegExp, setPhoneValid);
         setButtonPressed(true);
     };
 
@@ -79,6 +81,13 @@ function Popin() {
                             name="phone"
                             id="phone"
                             className={styles.input}
+                            value={phoneValue}
+                            onChange={(event) => {
+                                console.log(event.target.value);
+                                setPhoneeValue(event.target.value);
+                                if (!isButtonPressed) return;
+                                checkInput(event.target.value, phoneRegExp, setPhoneValid);
+                            }}
                             required
                         />
                         <div className={styles.errorMessage}>Неверный формат ввода поля</div>
