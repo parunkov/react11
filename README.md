@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Тестовое задание на React, Typescript.
+
+## Тестовая страница
+
+https://parunkov.github.io/react11/
+
+## Задание
+
+https://docs.google.com/document/d/1bwIyyyVkoFo065dCmMFYn2u-hz85zMn_jUxJ7ARBfN4/edit#heading=h.qrb0bminwfxz
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
