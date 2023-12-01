@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react11/static/css/main.8e538314.css",
+    "main.js": "/react11/static/js/main.bfcf55d8.js",
+    "static/js/787.64505ed6.chunk.js": "/react11/static/js/787.64505ed6.chunk.js",
+    "static/media/lemon.png": "/react11/static/media/lemon.3b43eafc7656df39e8ec.png",
+    "static/media/bottle.png": "/react11/static/media/bottle.2537824c6b756a08b950.png",
+    "static/media/circe.ttf": "/react11/static/media/circe.814e4dd4329ffdb6c9ed.ttf",
+    "static/media/circe-bold.ttf": "/react11/static/media/circe-bold.63396ee791f60623acbf.ttf",
+    "static/media/super.png": "/react11/static/media/super.b4fbd7f824c02d3eddc5.png",
+    "static/media/alisa.png": "/react11/static/media/alisa.a689ef6b8149bcb9f5ad.png",
+    "static/media/yandex.png": "/react11/static/media/yandex.339f54e979f6a45a5774.png",
+    "static/media/wach.png": "/react11/static/media/wach.cb9f87e49e2462a950fe.png",
+    "static/media/scooter.png": "/react11/static/media/scooter.227912a3e9cd8452e1d3.png",
+    "static/media/palm.png": "/react11/static/media/palm.7281cd4d9b889557a0a7.png",
+    "static/media/index.cjs": "/react11/static/media/index.87283f34b94ab8669cb4.cjs",
+    "static/media/leaf.png": "/react11/static/media/leaf.e8fbabbb88f51760759d.png",
+    "index.html": "/react11/index.html",
+    "main.8e538314.css.map": "/react11/static/css/main.8e538314.css.map",
+    "main.bfcf55d8.js.map": "/react11/static/js/main.bfcf55d8.js.map",
+    "787.64505ed6.chunk.js.map": "/react11/static/js/787.64505ed6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e538314.css",
+    "static/js/main.bfcf55d8.js"
+  ]
+}
