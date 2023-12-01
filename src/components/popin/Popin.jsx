@@ -67,7 +67,7 @@ function Popin() {
 
     return (
         <div className={styles.overlay}>
-            <div className={styles.popin}>
+            <div className={styles.popin} id="popin">
                 {isRegistred
                     ? <div className={styles.registerImage} dangerouslySetInnerHTML={{ __html: registerImage }} /> : ''}
                 <div className={styles.popinTitle}>{isRegistred ? 'Ваша регистрация прошла успешно!' : 'регистрация'}</div>
@@ -80,6 +80,7 @@ function Popin() {
                                 type="text"
                                 name="name"
                                 id="name"
+                                placeholder="Введите ФИО"
                                 className={styles.input}
                                 value={nameValue}
                                 onChange={(event) => {
@@ -97,6 +98,7 @@ function Popin() {
                                 type="text"
                                 name="login"
                                 id="login"
+                                placeholder="Введите e-mail"
                                 className={styles.input}
                                 value={loginValue}
                                 onChange={(event) => {
@@ -114,6 +116,7 @@ function Popin() {
                                 type="text"
                                 name="phone"
                                 id="phone"
+                                placeholder="+7"
                                 className={styles.input}
                                 value={phoneValue}
                                 onChange={(event) => {
@@ -136,7 +139,7 @@ function Popin() {
                 {isRegistred
                     ? <>
                         <div className={styles.registerText}>{`Добро пожаловать, ${nameValue}!`}</div>
-                        <button type="button" className={styles.button} >Закрыть окно</button>
+                        <button type="button" className={styles.button}>Закрыть окно</button>
                     </>
                     : <div className={styles.popinText}>Есть аккаунт? <a href="/">Авторизуйся</a></div>
                 }

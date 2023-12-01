@@ -20,12 +20,26 @@
         max-height: 100vh;
         overflow-y: auto;
     }
+    @media (max-width: 768px) {
+        top: auto;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 2.8em 2em;
+        padding-bottom: 5.3em;
+        border-radius: 2em 2em 0 0;
+        transform: none;
+    }
 }
 .registerImage {
     margin-bottom: 2em;
     svg {
         width: 12.6em;
         height: 12.6em;
+        @media (max-width: 768px) {
+            width: 9em;
+            height: 9em;
+        }
     }
 }
 .popinTitle {
@@ -37,9 +51,15 @@
     font-weight: 700;
     line-height: 5rem;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+    }
 }
 .inputGroup {
-    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
 }
 .hasError {
     .input {
@@ -51,12 +71,16 @@
 }
 .inputLabel {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     text-align: left;
     color: #000;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2rem;
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
 }
 .input {
     display: block;
@@ -66,9 +90,17 @@
     font-size: 1.8rem;
     font-weight: 400;
     line-height: normal;
-    border-radius: 14px;
+    border-radius: 1.4rem;
     border: 2px solid #3c4497;
     background: #fff;
+    &::placeholder {
+        color: rgba(68, 68, 68, 0.5);
+    }
+    @media (max-width: 768px) {
+        padding: 1.15rem;
+        border-color: #fff;
+        border-radius: 0.8rem;
+    }
 }
 .errorMessage {
     display: none;
@@ -84,6 +116,9 @@
     width: 100%;
     margin-bottom: 2rem;
     text-align: left;
+    @media (max-width: 768px) {
+        margin-bottom: 1.4rem;
+    }
 }
 .checkbox {
     position: absolute;
@@ -103,6 +138,11 @@
     font-weight: 400;
     line-height: 120%;
     cursor: pointer;
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        padding-right: 0;
+    }
 }
 .checkbox + label::before {
     content: "";
@@ -133,23 +173,41 @@
     font-weight: 700;
     line-height: 2rem;
     text-transform: uppercase;
-    border-radius: 14px;
+    border-radius: 1.4rem;
     background: #3c4497;
     border: none;
     outline: none;
     cursor: pointer;
+    @media (max-width: 768px) {
+        margin-bottom: 1.4rem;
+        padding: 1.4rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        border-radius: 0.8rem;
+    }
 }
 .popinText {
     color: #000;
     font-size: 2.4rem;
     font-weight: 400;
     line-height: 2rem;
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+    }
 }
 .popinCloseButton {
     position: absolute;
     top: 3em;
     right: 3em;
     cursor: pointer;
+    @media (max-width: 768px) {
+        top: 1.5em;
+        right: 1.5em;
+        svg {
+            width: 1.2em;
+            height: 1.2em;
+        }
+    }
 }
 .registerText {
     color: #000;
@@ -157,4 +215,8 @@
     font-weight: 400;
     line-height: 3.2rem;
     margin-bottom: 2rem;
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
 }
